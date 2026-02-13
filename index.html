@@ -9,6 +9,8 @@
             --neon-green: #00ff41;
             --dark-bg: #050505;
             --card-bg: #111;
+            --vip-purple: #bc13fe;
+            --gold: #ffd700;
         }
 
         body {
@@ -84,6 +86,22 @@
             border-color: var(--neon-green);
             box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
         }
+
+        /* افکت اختصاصی برای کد ۳ (VIP) */
+        .vip-card {
+            border: 1px solid var(--vip-purple) !important;
+            box-shadow: 0 0 10px rgba(188, 19, 254, 0.2);
+        }
+        .vip-card h3 { color: var(--vip-purple) !important; text-shadow: 0 0 10px var(--vip-purple); }
+        .vip-card:hover { box-shadow: 0 0 20px rgba(188, 19, 254, 0.5) !important; }
+
+        /* افکت اختصاصی برای کد ۴ (دوره آموزشی) */
+        .gold-card {
+            border: 1px solid var(--gold) !important;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+        .gold-card h3 { color: var(--gold) !important; text-shadow: 0 0 10px var(--gold); }
+        .gold-card:hover { box-shadow: 0 0 25px rgba(255, 215, 0, 0.4) !important; }
 
         .product-card h3 {
             color: var(--neon-green);
@@ -167,7 +185,7 @@
             <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">سفارش آنلاین</a>
         </div>
 
-        <div class="product-card">
+        <div class="product-card vip-card">
             <div>
                 <h3>پنل هدشات xvip برزیلی</h3>
                 <div class="duration">(اشتراک یک ماهه)</div>
@@ -177,7 +195,7 @@
             <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">سفارش آنلاین</a>
         </div>
 
-        <div class="product-card">
+        <div class="product-card gold-card">
             <div>
                 <h3>دوره ساخت پنل در اندروید</h3>
                 <div class="duration">(آموزش کامل و تخصصی)</div>
