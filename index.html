@@ -3,101 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تست پنل Super XVIP</title>
+    <title>LETPIX PANEL | مرجع پنل‌های تخصصی</title>
     <style>
         :root {
             --neon-green: #00ff41;
             --dark-bg: #050505;
+            --card-bg: #111;
         }
 
         body {
             background-color: var(--dark-bg);
             color: white;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Tahoma', sans-serif;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            padding: 0;
             text-align: center;
         }
 
-        /* افکت پس‌زمینه متحرک */
-        .bg-effect {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #00ff4115 0%, transparent 70%);
-            z-index: -1;
-        }
-
-        .container {
-            border: 2px solid var(--neon-green);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px var(--neon-green), inset 0 0 15px var(--neon-green);
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 20px var(--neon-green); }
-            50% { box-shadow: 0 0 40px var(--neon-green); }
-            100% { box-shadow: 0 0 20px var(--neon-green); }
+        header {
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #004d1a44, transparent);
+            border-bottom: 1px solid var(--neon-green);
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
+            color: var(--neon-green);
+            text-shadow: 0 0 15px var(--neon-green);
             margin: 0;
-            color: var(--neon-green);
-            text-shadow: 0 0 10px var(--neon-green);
-            letter-spacing: 5px;
+            letter-spacing: 3px;
         }
 
-        p {
-            font-size: 1.5rem;
+        .support-info {
+            margin-top: 10px;
             color: #aaa;
-            margin-top: 20px;
+            font-size: 1.1rem;
         }
 
-        .status-box {
-            margin-top: 30px;
-            padding: 10px;
-            border: 1px dashed var(--neon-green);
-            display: inline-block;
-        }
-
-        .blink {
-            animation: blinker 1s linear infinite;
+        .support-link {
             color: var(--neon-green);
+            text-decoration: none;
             font-weight: bold;
         }
 
-        @keyframes blinker {
-            50% { opacity: 0; }
+        /* سیستم دوتایی محصولات */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            border-color: var(--neon-green);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .product-card h3 {
+            color: var(--neon-green);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .product-code {
+            display: block;
+            margin-bottom: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .buy-btn {
+            display: block;
+            background: transparent;
+            color: var(--neon-green);
+            border: 2px solid var(--neon-green);
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+
+        .notice {
+            background: #222;
+            padding: 20px;
+            margin: 40px;
+            border-radius: 10px;
+            border-right: 5px solid var(--neon-green);
+            text-align: right;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            padding: 30px;
+            color: #555;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-effect"></div>
-
-    <div class="container">
-        <h1>SUPER XVIP</h1>
-        <p>سیستم امنیت و هدشات هوشمند</p>
-        
-        <div class="status-box">
-            وضعیت سایت: <span class="blink">در حال تست عملیاتی...</span>
+    <header>
+        <h1>LETPIX PANEL</h1>
+        <div class="support-info">
+            پشتیبانی روبیکا: <a href="https://rubika.ir/APPMAKER013" class="support-link">@APPMAKER013</a>
         </div>
-        
-        <p style="font-size: 1rem; color: #555; margin-top: 40px;">
-            طراحی شده برای تست لندینگ‌پیج گیت‌هاب | امیر
-        </p>
+    </header>
+
+    <div class="notice">
+        <strong>⚠️ راهنمای خرید:</strong><br>
+        پس از کلیک بر روی دکمه خرید، در سایت دارمت حتماً در بخش <b>توضیحات</b>، "کد محصول" و "آیدی روبیکا" خود را وارد کنید تا لایسنس برای شما ارسال شود.
     </div>
+
+    <section class="products-grid">
+        <div class="product-card">
+            <h3>پنل هدشات اختصاصی</h3>
+            <span class="price">۷۰,۰۰۰ تومان</span>
+            <span class="product-code">کد محصول: ۱</span>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+        </div>
+
+        <div class="product-card">
+            <h3>پنل هدشات v2 قوی</h3>
+            <span class="price">۱۲۰,۰۰۰ تومان</span>
+            <span class="product-code">کد محصول: ۲</span>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+        </div>
+
+        <div class="product-card">
+            <h3>پنل هدشات xvip برزیلی</h3>
+            <span class="price">۱۹۰,۰۰۰ تومان</span>
+            <span class="product-code">کد محصول: ۳</span>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 LETPIX PANEL | All Rights Reserved
+    </footer>
 
 </body>
 </html>
