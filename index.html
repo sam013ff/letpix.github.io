@@ -21,112 +21,114 @@
         }
 
         header {
-            padding: 50px 20px;
-            background: linear-gradient(to bottom, #004d1a44, transparent);
-            border-bottom: 1px solid var(--neon-green);
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #004d1a33, transparent);
+            border-bottom: 2px solid var(--neon-green);
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--neon-green);
             text-shadow: 0 0 15px var(--neon-green);
             margin: 0;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .support-info {
-            margin-top: 10px;
-            color: #aaa;
-            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 1rem;
         }
 
         .support-link {
             color: var(--neon-green);
             text-decoration: none;
             font-weight: bold;
+            border: 1px solid var(--neon-green);
+            padding: 2px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
         }
 
-        /* سیستم دوتایی محصولات */
+        .notice {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 1px dashed var(--neon-green);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 40px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .product-card {
             background: var(--card-bg);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 25px;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 20px;
             transition: 0.3s;
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .product-card:hover {
             border-color: var(--neon-green);
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
         }
 
         .product-card h3 {
             color: var(--neon-green);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .duration {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
 
         .price {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            margin: 15px 0;
-            display: block;
+            color: #fff;
+            margin: 10px 0;
         }
 
         .product-code {
-            display: block;
-            margin-bottom: 20px;
-            color: #888;
-            font-size: 0.9rem;
+            color: #555;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
         }
 
         .buy-btn {
-            display: block;
-            background: transparent;
-            color: var(--neon-green);
-            border: 2px solid var(--neon-green);
+            background: var(--neon-green);
+            color: black;
             padding: 12px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .buy-btn:hover {
-            background: var(--neon-green);
-            color: black;
+            filter: brightness(1.2);
             box-shadow: 0 0 15px var(--neon-green);
         }
 
-        .notice {
-            background: #222;
-            padding: 20px;
-            margin: 40px;
-            border-radius: 10px;
-            border-right: 5px solid var(--neon-green);
-            text-align: right;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         footer {
-            padding: 30px;
-            color: #555;
+            padding: 40px;
+            color: #444;
             font-size: 0.8rem;
-            border-top: 1px solid #222;
         }
     </style>
 </head>
@@ -135,40 +137,49 @@
     <header>
         <h1>LETPIX PANEL</h1>
         <div class="support-info">
-            پشتیبانی روبیکا: <a href="https://rubika.ir/APPMAKER013" class="support-link">@APPMAKER013</a>
+            پشتیبانی در روبیکا: <a href="https://rubika.ir/APPMAKER013" class="support-link">@APPMAKER013</a>
         </div>
     </header>
 
     <div class="notice">
-        <strong>⚠️ راهنمای خرید:</strong><br>
-        پس از کلیک بر روی دکمه خرید، در سایت دارمت حتماً در بخش <b>توضیحات</b>، "کد محصول" و "آیدی روبیکا" خود را وارد کنید تا لایسنس برای شما ارسال شود.
+        <strong>راهنمای فعال‌سازی:</strong><br>
+        لطفاً هنگام پرداخت در سایت دارمت، <b>کد محصول</b> و <b>آیدی روبیکا</b> خود را در قسمت توضیحات بنویسید.
     </div>
 
     <section class="products-grid">
         <div class="product-card">
-            <h3>پنل هدشات اختصاصی</h3>
+            <div>
+                <h3>پنل هدشات اختصاصی</h3>
+                <div class="duration">(اشتراک یک ماهه)</div>
+            </div>
             <span class="price">۷۰,۰۰۰ تومان</span>
             <span class="product-code">کد محصول: ۱</span>
-            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">سفارش آنلاین</a>
         </div>
 
         <div class="product-card">
-            <h3>پنل هدشات v2 قوی</h3>
+            <div>
+                <h3>پنل هدشات v2 قوی</h3>
+                <div class="duration">(اشتراک یک ماهه)</div>
+            </div>
             <span class="price">۱۲۰,۰۰۰ تومان</span>
             <span class="product-code">کد محصول: ۲</span>
-            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">سفارش آنلاین</a>
         </div>
 
         <div class="product-card">
-            <h3>پنل هدشات xvip برزیلی</h3>
+            <div>
+                <h3>پنل هدشات xvip برزیلی</h3>
+                <div class="duration">(اشتراک یک ماهه)</div>
+            </div>
             <span class="price">۱۹۰,۰۰۰ تومان</span>
             <span class="product-code">کد محصول: ۳</span>
-            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">خرید و ثبت سفارش</a>
+            <a href="https://daramet.com/mrsam_hemayat" class="buy-btn">سفارش آنلاین</a>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 LETPIX PANEL | All Rights Reserved
+        &copy; 2026 LETPIX PANEL | مرجع گیمینگ حرفه‌ای
     </footer>
 
 </body>
